@@ -86,7 +86,7 @@ border-radius: 999px;
 body[data-theme="dark"] .profile-image-container img {
   width: 75px;
   height: 75px;
-  left: 2px;
+  left: 0;
 }
 
 header nav{
