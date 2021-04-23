@@ -177,7 +177,7 @@ h2{
 }
 
 h3{
-  font-size: 13px;
+  font-size: 15px;
   opacity: 0.535;
   font-weight: 500;
   text-transform: uppercase;
@@ -194,7 +194,7 @@ h4{
 }
 
 h5{
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 400;
   opacity: 0.666;
   margin: 0 0 28px;
@@ -202,7 +202,7 @@ h5{
 }
 
 h6{
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   opacity: 0.666;
   transition: color 150ms ease-in-out;
@@ -280,19 +280,25 @@ blockquote{
   height: 2.5rem;
 }
 
-ul{
+ul, li{
   list-style-type: none;
   list-style-position: initial;
-}
-
-ul li{
-  /* margin: 0; */
-  /* padding: 0; */
   text-align: left;
+  margin: 0px;
 }
 
-ul, i, span{
+span, i{
   display: inline-block;
+  /* margin-top: 0; */
+}
+
+.iconbtn{
+  width: 30px;
+  height: 30px;
+  text-decoration: none;
+  position: relative;
+  font-size: 20px;
+  opacity: .5;
 }
 
 ul.contact-info{
