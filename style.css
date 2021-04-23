@@ -217,6 +217,31 @@ body[data-theme="dark"] h5{
   color: #767d96;
 }
 
+.status {
+  margin-bottom: 20px;
+}
+
+.tag {
+  font-size: 12px;
+  font-weight: 400;
+  padding: 5px 15px;
+  border-radius: 3px;
+  vertical-align: text-top;
+  display: inline-block;
+  white-space: nowrap;
+  transition: color 150ms ease-in-out;
+}
+
+.tag-primary {
+  background: #1879cd;
+  color: #fff;
+}
+
+.tag-secondary {
+  background: #0b8939;
+  color: #fff;
+}
+
 blockquote{
   margin: 0 0 150px 0;
   font-size: 24px;
@@ -354,6 +379,15 @@ ul.contact-info{
 
   h5{
     font-size: 14px;
+  }
+
+  .status {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+  .tag {
+    padding: 4px 11px;
   }
 
   blockquote{
