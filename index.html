@@ -28,6 +28,7 @@
           <a target='_blank' href='https://discordapp.com/users/Auvere#1746' rel='noreferrer noopener nofollow'><span class="fab fa-discord fa-2x"></span></a>
           <a target='_blank' href='https://instagram.com/baoqingna' rel='noreferrer noopener nofollow'><span class="fab fa-instagram fa-2x"></span></a>
           <a target='_blank' href='mailto:pljvlln@gmail.com' rel='noreferrer noopener nofollow'><span class="far fa-paper-plane fa-2x"></span></a>
+          <button id='theme-button'></button>
         </nav>
       </header>
 
@@ -57,8 +58,40 @@
             </div>
             </div>
           </div>
-        </div>
+         </div> <!-- 2nd container -->
       </div>
     </footer>
+
+    <script type="text/javascript">
+
+    // Theme-switcher
+    const themeButton = document.getElementById('theme-button');
+    function setTheme({light = true}) {
+      if (light) {
+        document.body.setAttribute('data-theme', 'light');
+        themeButton.innerText = '🌙';
+      }else {
+        document.body.setAttribute('data-theme', 'dark');
+        themeButton.innerText = '🌞';
+      }
+    }
+
+    // Toggle
+    const THEME_STORAGE_KEY = "baoqingna.github.io_theme";
+    function toggleTheme() {
+        const light = document.body.getAttribute('data-theme') !== 'light';
+        setTheme({ light });
+
+        // Remember.
+        localStorage.setItem(THEME_STORAGE_KEY, document.body.getAttribute('data-theme'));
+    }
+    themeButton.onclick = toggleTheme;
+
+    // Default to the user's theme, or their stored preference.
+    const stored = localStorage.getItem(THEME_STORAGE_KEY);
+    const defaultIsLight = !(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    setTheme({ light: stored ? stored === 'light' : defaultIsLight });
+
+    </script>
   </body> <!-- ending here -->
 </html>
