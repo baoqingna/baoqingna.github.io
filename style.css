@@ -103,7 +103,7 @@ header nav a{
 }
 
 header nav button{
-  transform: rotate(40deg);
+  /* transform: rotate(40deg); */
   width: 22px;
 }
 
@@ -136,7 +136,7 @@ a:focus, button:focus-visible{
   outline-width: 1px;
 }
 
-button {
+button{
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
