@@ -313,7 +313,9 @@ blockquote{
   }
 
   header nav {
-    margin-right: -27px;
+    /* margin-right: -10px; */
+    text-align: center;
+    padding-top: 15px;
     position: static;
     font-size: 13px;
   }
@@ -325,10 +327,10 @@ blockquote{
 
   .profile-image-container{
     position: relative;
-    width: 94px;
-    height: 94px;
-    background: radial-gradient(circle at center, #ffca57 0, #ffca57 46px, transparent 47px);
-    clip-path: path('M 0 -6 L 0,47 A 1,1 0,0,0 94,47 L 94 -6 z');
+    width: 90px;
+    height: 90px;
+    /* background: radial-gradient(circle at center, #ffca57 0, #ffca57 46px, transparent 47px); */
+    /* clip-path: path('M 0 -6 L 0,47 A 1,1 0,0,0 94,47 L 94 -6 z'); */
     display: inline-block;
     margin-right: 0;
     margin-bottom: 2px;
@@ -337,23 +339,23 @@ blockquote{
   }
 
   .profile-image-container img{
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
 
-  .profile-image-container:before{
+  /* .profile-image-container:before{
     width: 94px;
     height: 94px;
     top: 5px;
     left: 7px;
-  }
+  } */
 
   h1{
     margin-bottom: 3px;
   }
 
   h2{
-    display: none;
+    /* display: none; */
   }
 
   h3{
