@@ -127,7 +127,7 @@ a:hover{
   border-bottom: solid 1px rgba(0, 0, 0, 0.4);
   border-bottom-style: solid;
   outline: none;
-  transition: .5s;
+  transition: 1s;
 }
 
 a:focus, button:focus-visible{
@@ -280,11 +280,6 @@ blockquote{
   position: sticky;
   bottom: 0;
   top: 100%;
-}
-
-.foot{
-  position: absolute;
-  bottom: 0;
 }
 
 
