@@ -282,6 +282,13 @@ blockquote{
   top: 100%;
 }
 
+.foot{
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+
 
 @media (max-width: 972px) {
   blockquote br {
