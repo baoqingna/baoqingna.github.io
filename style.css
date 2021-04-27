@@ -263,12 +263,12 @@ blockquote{
 }
 
 .container-list{
+  position: relative;
   max-width: 1140px;
   /* max-width: 100%; */
   margin: 0 auto;
   padding: 0 15px 150px 0;
   /* padding: 0 0 150px 0; */
-  position: relative;
 }
 
 .container-list h3{
@@ -299,12 +299,12 @@ blockquote{
 }
 
 .overlay{
-  position: absolute;
+  position: relative;
   width: 100%;
 }
 
 .overlay-content{
-  position: inherit;
+  position: absolute;
   margin: 100px 100px 100px 0;
   right: 0;
   /* top: 0;
@@ -322,8 +322,9 @@ blockquote{
 }
 
 .overlay-content h1{
+  position: absolute;
+  left: 0;
   font-size: 30px;
-  /* left: 0; */
 }
 
 
