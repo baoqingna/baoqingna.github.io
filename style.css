@@ -1,7 +1,7 @@
 body{
   margin: 0;
   padding-top: 150px;
-  padding-bottom: 150px;
+  padding-bottom: 10px;
   height: 100vh;
   font-family: "Helvetica Neue", sans-serif;
   font-weight: lighter;
@@ -12,6 +12,11 @@ body{
 body[data-theme="dark"]{
   background: #11131f;
   color: #767d96;
+}
+
+section{
+  position: relative;
+  top: 0;
 }
 
 .container {
@@ -258,25 +263,25 @@ blockquote{
 }
 
 #footer{
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
-  height: 60px;
+  /* height: 60px; */
   /* position: sticky;
   bottom: 0;
   top: 100%; */
 }
 
 #content-wrap{
-  padding-top: 100px;
-  padding-bottom: 2.5rem;
+  /* padding-top: 100px;
+  padding-bottom: 2.5rem; */
   width: 100%;
   margin: 0 auto;
 }
 
 .Footer-Img{
   background-image: url(Img/for2-min.jpg);
-  height: 50vh;
+  height: 40vh;
 
   background-attachment: fixed;
   background-position: center;
@@ -289,8 +294,8 @@ blockquote{
 
 .foot{
   position: absolute;
-  width: 100%;
   bottom: 0;
+  width: 100%;
   text-align: center;
 }
 
@@ -303,7 +308,8 @@ blockquote{
 
 @media (max-width: 768px){
   body{
-    padding-top: 50px;
+    /* padding-top: 100px; */
+    min-height: 100vh;
   }
 
   body[data-theme="dark"] .profile-image-container img {
@@ -404,15 +410,18 @@ blockquote{
     transition: color 150ms ease-in-out;
   }
 
-  #content-wrap {
-    padding-top: 150px;
-    padding-bottom: 2.5rem;
+  #footer {
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    /* height: 2.5rem; */
   }
 
-  #footer {
+  #content-wrap {
     bottom: 0;
-    width: 100%;
-    height: 2.5rem;
+    /* padding-top: 100px;
+    padding-bottom: 2.5rem; */
   }
+
 
 } /* Media end */
