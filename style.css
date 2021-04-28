@@ -327,7 +327,38 @@ blockquote{
   font-size: 30px;
 }
 
+.container-footer{
+  position: relative;
+  max-width: 1140px;
+  /* margin: 0 auto; */
+  padding: 0 150px 100px 0;
+  margin-right: 100px;
+  /* min-height: 20vh; */
+}
 
+.footer-content{
+  position: relative;
+  margin: 0 100px 100px 0;
+
+  width: 100%;
+}
+
+.footer-content h1,
+.footer-content h2{
+  position: absolute;
+  right: 0;
+}
+
+.footer-content h1{
+  font-size: 40px;
+  font-language-override: normal;
+}
+
+.footer-content h2{
+  position: absolute;
+  font-size: 20px;
+  right: 140px;
+}
 
 /* Footer */
 #footer{
