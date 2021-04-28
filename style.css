@@ -262,13 +262,20 @@ blockquote{
   transition: color 150ms ease-in-out;
 }
 
+.container-list-header{
+  position: relative;
+  margin: 0 auto;
+  max-width: 1140px;
+  padding: 0 15px 0 0;
+}
+
 .container-list{
   position: relative;
-  max-width: 1140px;
-  /* max-width: 100%; */
+  /* max-width: 1140px; */
+  /* padding: 0 15px 150px 0; */
+  max-width: 100%;
   margin: 0 auto;
-  padding: 0 15px 150px 0;
-  /* padding: 0 0 150px 0; */
+  padding: 0 0 150px 0;
 }
 
 .container-list h3{
@@ -412,7 +419,8 @@ blockquote{
     }
 
   .container,
-  .container-footer{
+  .container-footer,
+  .container-list-header{
     padding: 0 30px 1rem;
   }
 
