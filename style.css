@@ -262,14 +262,14 @@ blockquote{
   transition: color 150ms ease-in-out;
 }
 
-.container-list-header{
+.container-img-list-header{
   position: relative;
   margin: 0 auto;
   max-width: 1140px;
   padding: 0 15px 0 0;
 }
 
-.container-list{
+.container-img-list{
   position: relative;
   /* max-width: 1140px; */
   /* padding: 0 15px 150px 0; */
@@ -278,11 +278,11 @@ blockquote{
   padding: 0 0 150px 0;
 }
 
-.container-list h3{
+.container-img-list h3{
   text-align: left;
 }
 
-.container-list ul{
+.container-img-list ul{
   list-style-type: none;
   text-decoration: none;
   margin: 0;
@@ -290,7 +290,7 @@ blockquote{
   display: hidden;
 }
 
-.container-list img{
+.content-wrapper img{
   position: relative;
   width: 100%;
   height: 40%;
@@ -301,16 +301,16 @@ blockquote{
   transition: 1s ease-in-out;
 }
 
-.container-list img:hover{
+.content-wrapper img:hover{
   opacity: 1;
 }
 
-.overlay{
+.content-wrapper{
   position: relative;
   width: 100%;
 }
 
-.overlay-content{
+.text-content{
   position: absolute;
   margin: 100px 100px 100px 0;
   right: 0;
@@ -321,14 +321,14 @@ blockquote{
   z-index: 1;
 }
 
-.overlay-content h2,
-.overlay-content h4{
+.text-content h2,
+.text-content h4{
   /* right: 0; */
   margin-bottom: 10px;
   font-size: 20px;
 }
 
-.overlay-content h1{
+.text-content h1{
   position: absolute;
   left: 0;
   font-size: 30px;
