@@ -338,26 +338,21 @@ blockquote{
 
 .footer-content{
   position: relative;
-  margin: 0 100px 100px 0;
-
+  margin: 0 0 100px 0;
   width: 100%;
 }
 
 .footer-content h1,
 .footer-content h2{
-  position: absolute;
-  right: 0;
+  text-align: right;
 }
 
 .footer-content h1{
   font-size: 40px;
-  font-language-override: normal;
 }
 
 .footer-content h2{
-  position: absolute;
-  font-size: 20px;
-  right: 140px;
+  font-size: 25px;
 }
 
 /* Footer */
@@ -416,8 +411,13 @@ blockquote{
     height: 84px;
     }
 
-  .container{
-    padding: 0 30px;
+  .container,
+  .container-footer{
+    padding: 0 30px 1rem;
+  }
+
+  .container-footer{
+    margin: 0;
   }
 
   header{
