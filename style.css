@@ -271,8 +271,6 @@ blockquote{
 
 .container-img-list{
   position: relative;
-  /* max-width: 1140px; */
-  /* padding: 0 15px 150px 0; */
   max-width: 100%;
   margin: 0 auto;
   padding: 0 0 150px 0;
@@ -291,7 +289,6 @@ blockquote{
 }
 
 .content-wrapper img{
-  position: relative;
   width: 100%;
   height: 40%;
   object-position: 30% 50%;
@@ -306,16 +303,14 @@ blockquote{
 }
 
 .content-wrapper{
-  position: relative;
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .text-content{
   position: absolute;
-  margin: 100px 100px 100px 0;
-  right: 0;
-  /* top: 0;
-  left: 0; */
+  margin: 100px 50px 100px ;
   font-weight: 300;
   font-size: 24px;
   z-index: 1;
@@ -329,8 +324,6 @@ blockquote{
 }
 
 .text-content h1{
-  position: absolute;
-  left: 0;
   font-size: 30px;
 }
 
