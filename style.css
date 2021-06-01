@@ -9,6 +9,10 @@ body{
   transition: background 150ms ease-in-out, color 150ms ease-in-out;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body[data-theme="dark"]{
   background: #11131f;
   color: #767d96;
@@ -314,6 +318,7 @@ blockquote{
   font-weight: 300;
   font-size: 24px;
   width: 90%;
+  pointer-events: none;
   z-index: 1;
 }
 
