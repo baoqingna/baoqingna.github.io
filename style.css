@@ -2,6 +2,10 @@
   background: #446B40;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding-top: 150px;
@@ -11,10 +15,6 @@ body {
   font-weight: lighter;
   color: #000000;
   transition: background 150ms ease-in-out, color 150ms ease-in-out;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body[data-theme="dark"] {
@@ -110,7 +110,7 @@ header nav {
 }
 
 header nav a {
-  opacity: 0.8;
+  opacity: 0.7;
   margin-right: 20px;
 }
 
@@ -120,11 +120,10 @@ header nav button {
 }
 
 /* icons */
-a,
-a:active,
-a:visited,
-a:focus,
-a:focus {
+nav a,
+nav a:active,
+nav a:visited,
+nav a:focus {
   color: inherit;
   text-decoration: none;
   border-bottom: dashed 1px;
@@ -132,15 +131,15 @@ a:focus {
   transition: border-bottom-color 500ms ease-in-out;
 }
 
-a:hover {
+nav a:hover {
   color: #446B40;
   border-bottom: solid 1px rgba(0, 0, 0, 0.4);
   border-bottom-style: solid;
   outline: none;
-  transition: .5s;
+  transition: 1s;
 }
 
-a:focus, button:focus-visible {
+nav a:focus, button:focus-visible {
   outline-color: #446B40;
   outline-offset: 4px;
   outline-width: 1px;
@@ -262,8 +261,8 @@ body[data-theme="dark"] h5 {
   color: #fff;
 }
 
-blockquote {
-  margin: 0 0 150px 0;
+.container blockquote {
+  margin: 0 0 100px 0;
   font-size: 24px;
   line-height: 1.5625em;
   opacity: 0.8;
@@ -335,6 +334,11 @@ blockquote {
   width: 400px;
 }
 
+.container-img-list-header h1 {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 15px;
+}
 .text-content h1 {
   position: relative;
   font-weight: normal;
@@ -370,13 +374,71 @@ blockquote {
   opacity: .9;
 }
 
+/* RESUME */
+.container__resume {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px 100px 0;
+  position: relative;
+  /* min-height: 20vh; */
+}
+
+.resume-item {
+  margin-bottom: 80px;
+}
+
+.resume-item .tag {
+  margin-left: 15px;
+}
+
+.resume-item ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 28px;
+}
+
+.resume-item li {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  line-height: 1.4em;
+}
+
+.resume-item-date {
+  margin: 0;
+  font-size: 15px;
+  opacity: 0.8;
+}
+
+.resume-item h5 a {
+  font-size: 15px;
+}
+
+.resume-item a,
+.resume-item a:active,
+.resume-item a:focus {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: dashed 1px;
+  padding-bottom: 2px;
+  transition: border-bottom-color 500ms ease-in-out;
+}
+
+.resume-item a:hover {
+  border-bottom-style: solid;
+  outline: none;
+  transition: 1s;
+}
+
+
+/* FOOTER */
 .container-footer {
   position: relative;
   max-width: 1140px;
+  min-height: 20vh;
   margin: 0 auto;
-  padding: 0 150px 100px 0;
+  padding: 0 150px 0 0;
   margin-right: 100px;
-  /* min-height: 20vh; */
 }
 
 .footer-content {
@@ -386,21 +448,28 @@ blockquote {
   padding-right: 200px;
 }
 
-.footer-content h1,
-.footer-content h2 {
-  /* text-align: right; */
-}
-
 .footer-content h1 {
   font-size: 50px;
 }
 
 .footer-content h2 {
-  font-size: 25px;
+  font-size: 18px;
   opacity: 0.8;
 }
 
-/* Footer */
+.footer-content a,
+.footer-content a:active,
+.footer-content a:visited,
+.footer-content a:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-content a h1:hover {
+  color: #446B40;
+  transition: 1s;
+}
+
 #footer {
   position: relative;
   bottom: 0;
@@ -436,6 +505,7 @@ blockquote {
   width: 100%;
   text-align: center;
 }
+
 
 @media (max-width: 972px) {
   blockquote br {
