@@ -448,8 +448,11 @@ body[data-theme="dark"] h5 {
   padding-right: 200px;
   opacity: 0;
   transform: translateY(3rem);
-  animation: footer-content__fade-in 2000ms ease forwards;
-  /* animation-duration: 3s; */
+  /* animation: 2s footer-content__fade-in 2000ms ease-in-out forwards; */
+  animation-name: footer-content__fade-in;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-duration: 2000ms;
   animation-delay: 2000ms;
 }
 
