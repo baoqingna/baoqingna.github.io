@@ -2,6 +2,11 @@
   background: #446B40;
 }
 
+:root {
+  --profileiconSpeed: 2000ms;
+  --navDelay: 2000ms;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -78,6 +83,47 @@ left: -3px;
 transition: all 150ms ease-in-out;
 border-radius: 999px;
 } */
+
+.profile-image-container {
+  opacity: 0;
+  z-index: 10;
+  transform: translateZ(5rem);
+  animation-name: profile-icon__fade-in;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-duration: var(--profileiconSpeed);
+}
+
+header h1 {
+  opacity: 0;
+  transform: translateZ(5rem);
+  animation-name: profile-icon-h1__fade-in;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-duration: var(--profileiconSpeed);
+  animation-delay: 500ms;
+}
+
+header h2 {
+  opacity: 0;
+  transform: translateZ(5rem);
+  animation-name: profile-icon-h2__fade-in;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-duration: var(--profileiconSpeed);
+  animation-delay: 1000ms;
+}
+
+header nav {
+  opacity: 0;
+  transform: translateZ(5rem);
+  animation-name: header-nav__fade-in;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-duration: var(--profileiconSpeed);
+  animation-delay: 2000ms;
+}
+
 .profile-image-container {
   position: absolute;
   width: 75px;
@@ -263,12 +309,18 @@ body[data-theme="dark"] h5 {
 
 .container blockquote {
   margin: 0 0 100px 0;
-  font-size: 24px;
-  line-height: 1.5625em;
-  opacity: 0.8;
   max-width: 970px;
+  font-size: 24px;
   font-weight: 300;
+  line-height: 1.5625em;
   transition: color 150ms ease-in-out;
+  opacity: 0;
+  transform: translateZ(5rem);
+  animation-name: blockquote__fade-in;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-duration: var(--profileiconSpeed);
+  animation-delay: calc(var(--navDelay) + 1000ms);
 }
 
 .container-img-list-header {
@@ -452,8 +504,8 @@ body[data-theme="dark"] h5 {
   animation-name: footer-content__fade-in;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
-  animation-duration: 2000ms;
-  animation-delay: 2000ms;
+  animation-duration: var(--profileiconSpeed);
+  animation-delay: calc(var(--navDelay) + 2000ms);
 }
 
 .footer-content h1 {
@@ -513,6 +565,41 @@ body[data-theme="dark"] h5 {
   bottom: 0;
   width: 100%;
   text-align: center;
+}
+
+@keyframes profile-icon__fade-in {
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+@keyframes profile-icon-h1__fade-in {
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+@keyframes profile-icon-h2__fade-in {
+  to {
+    opacity: 0.8;
+    transform: translateZ(0);
+  }
+}
+
+@keyframes header-nav__fade-in {
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+@keyframes blockquote__fade-in {
+  to {
+    opacity: 0.8;
+    transform: translateZ(0);
+  }
 }
 
 @keyframes footer-content__fade-in {
