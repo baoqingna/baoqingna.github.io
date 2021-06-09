@@ -467,6 +467,7 @@ body[data-theme="dark"] h5 {
 
 .footer-content a h1:hover {
   color: #446B40;
+  cursor: pointer;
   transition: 1s;
 }
 
