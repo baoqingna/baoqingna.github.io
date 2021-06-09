@@ -136,7 +136,7 @@ nav a:hover {
   border-bottom: solid 1px rgba(0, 0, 0, 0.4);
   border-bottom-style: solid;
   outline: none;
-  transition: 1s;
+  transition: 1000ms;
 }
 
 nav a:focus, button:focus-visible {
@@ -446,6 +446,11 @@ body[data-theme="dark"] h5 {
   right: 0;
   width: 400px;
   padding-right: 200px;
+  opacity: 0;
+  transform: translateY(3rem);
+  animation: footer-content__fade-in 2000ms ease forwards;
+  /* animation-duration: 3s; */
+  animation-delay: 2000ms;
 }
 
 .footer-content h1 {
@@ -463,12 +468,13 @@ body[data-theme="dark"] h5 {
 .footer-content a:focus {
   color: inherit;
   text-decoration: none;
+  transition-duration: 500ms;
 }
 
 .footer-content a h1:hover {
   color: #446B40;
   cursor: pointer;
-  transition: 1s;
+  transition-duration: 500ms;
 }
 
 #footer {
@@ -505,6 +511,13 @@ body[data-theme="dark"] h5 {
   bottom: 0;
   width: 100%;
   text-align: center;
+}
+
+@keyframes footer-content__fade-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 
