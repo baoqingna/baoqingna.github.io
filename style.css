@@ -610,13 +610,13 @@ button:focus {
 }
 
 
-@media (max-width: 972px) {
-  blockquote br {
+@media screen and (max-width: 972px) {
+  .container blockquote br {
     display: none;
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   body {
     /* padding-top: 100px; */
     min-height: 100vh;
