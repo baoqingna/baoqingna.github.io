@@ -19,11 +19,37 @@ body {
   font-family: "Helvetica Neue", sans-serif;
   font-weight: lighter;
   color: #000000;
-  transition: background 150ms ease-in-out, color 150ms ease-in-out;
+  /* transition: background 150ms ease-in-out, color 150ms ease-in-out; */
 }
 
 body[data-theme="dark"] {
   background: #11131f;
+  color: #767d96;
+}
+
+body[data-theme="dark"] .profile-image-container img {
+  width: 60px;
+  height: 60px;
+  left: 2px;
+}
+
+body[data-theme="dark"] .profile-image-container img {
+  width: 75px;
+  height: 75px;
+  left: 0;
+}
+
+body[data-theme="dark"] h1,
+body[data-theme="dark"] h3,
+body[data-theme="dark"] h6,
+body[data-theme="dark"] blockquote {
+  color: #ffffff;
+}
+
+body[data-theme="dark"] h2,
+body[data-theme="dark"] h4,
+body[data-theme="dark"] h5,
+body[data-theme="dark"] a {
   color: #767d96;
 }
 
@@ -46,50 +72,37 @@ header {
   padding-left: 100px;
 }
 
-body[data-theme="dark"] .profile-image-container img {
-  width: 60px;
-  height: 60px;
-  left: 2px;
-}
-
 .profile-image-container {
   opacity: 0;
   z-index: 10;
-  transform: translateZ(5rem);
-  animation-name: profile-icon__fade-in;
+  animation: var(--profileiconSpeed) profile-icon__fade-in
+    ease-in-out forwards;
+  /* animation-name: profile-icon__fade-in;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
-  animation-duration: var(--profileiconSpeed);
+  animation-duration: var(--profileiconSpeed); */
 }
 
 header h1 {
   opacity: 0;
-  transform: translateZ(5rem);
-  animation-name: profile-icon-h1__fade-in;
+  animation: var(--profileiconSpeed) profile-icon-h1__fade-in 500ms
+    ease-in-out forwards;
+  /* animation-name: profile-icon-h1__fade-in;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
   animation-duration: var(--profileiconSpeed);
-  animation-delay: 500ms;
+  animation-delay: 500ms; */
 }
 
 header h2 {
   opacity: 0;
-  transform: translateZ(5rem);
-  animation-name: profile-icon-h2__fade-in;
+  animation: var(--profileiconSpeed) profile-icon-h2__fade-in 1000ms
+    ease-in-out forwards;
+  /* animation-name: profile-icon-h2__fade-in;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
   animation-duration: var(--profileiconSpeed);
-  animation-delay: 1000ms;
-}
-
-header nav {
-  opacity: 0;
-  transform: translateZ(5rem);
-  animation-name: header-nav__fade-in;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-  animation-duration: var(--profileiconSpeed);
-  animation-delay: 2000ms;
+  animation-delay: 1000ms; */
 }
 
 .profile-image-container {
@@ -108,12 +121,6 @@ header nav {
   transition: all 150ms ease-in-out;
 }
 
-body[data-theme="dark"] .profile-image-container img {
-  width: 75px;
-  height: 75px;
-  left: 0;
-}
-
 header nav {
   position: absolute;
   right: 0;
@@ -121,6 +128,9 @@ header nav {
   flex: 1;
   align-items: flex-end;
   text-align: right;
+  opacity: 0;
+  animation: var(--profileiconSpeed) header-nav__fade-in 2000ms
+    ease-in-out forwards;
 }
 
 header nav a {
@@ -235,19 +245,6 @@ h6 {
 .container-img-list h4 {
   opacity: 0.7;
   transition: color 500ms ease-in-out;
-}
-
-body[data-theme="dark"] h1,
-body[data-theme="dark"] h3,
-body[data-theme="dark"] h6,
-body[data-theme="dark"] blockquote {
-  color: #ffffff;
-}
-
-body[data-theme="dark"] h2,
-body[data-theme="dark"] h4,
-body[data-theme="dark"] h5 {
-  color: #767d96;
 }
 
 .status {
@@ -538,6 +535,10 @@ body[data-theme="dark"] h5 {
 }
 
 @keyframes profile-icon__fade-in {
+  from {
+    transform: translateZ(5rem);
+  }
+
   to {
     opacity: 1;
     transform: translateZ(0);
@@ -545,6 +546,10 @@ body[data-theme="dark"] h5 {
 }
 
 @keyframes profile-icon-h1__fade-in {
+  from {
+    transform: translateZ(5rem);
+  }
+
   to {
     opacity: 1;
     transform: translateZ(0);
@@ -552,6 +557,10 @@ body[data-theme="dark"] h5 {
 }
 
 @keyframes profile-icon-h2__fade-in {
+  from {
+    transform: translateZ(5rem);
+  }
+
   to {
     opacity: 0.8;
     transform: translateZ(0);
@@ -559,6 +568,10 @@ body[data-theme="dark"] h5 {
 }
 
 @keyframes header-nav__fade-in {
+  from {
+    transform: translateZ(5rem);
+  }
+
   to {
     opacity: 1;
     transform: translateZ(0);
@@ -666,7 +679,7 @@ body[data-theme="dark"] h5 {
   }
 
   h2 {
-    /* display: none; */
+    display: none;
   }
 
   h3 {
@@ -696,7 +709,7 @@ body[data-theme="dark"] h5 {
     padding: 4px 11px;
   }
 
-  blockquote {
+  .container blockquote {
     text-align: center;
     font-size: 17px;
     margin-bottom: 50px;
